@@ -18,6 +18,7 @@ export default function Tech() {
         <div className='text-white h-screen'>
             <div>
                 {blogs && blogs.map((blog) => (
+
                     <BlogView key={blog.id} blog={blog} />
                 ))}
             </div>
