@@ -24,6 +24,7 @@ export const Skills = ({ data, mySkills, setSkills }) => {
             </div>
           ))}
         </div>
+        <p>your selected skills</p>
         {mySkills && mySkills.map((mySkill) => (
           <div className="grid grid-cols-3">
             <div className="p-2 ml-5 mt-5">

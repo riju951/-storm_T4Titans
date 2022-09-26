@@ -12,12 +12,16 @@ app.use((req, res, next) => {
     next();
 })
 
-
 //routes
 app.get('/', (req, res) => {
     res.json({ mssg: 'welcome to the app' })
 })
+app.get('/myassessment', (req, res) => {
+    res.json({ mssg: "Please give assessment" })
+})
 app.use('/blogs', blogRoutes)
+
+
 
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {
