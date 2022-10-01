@@ -7,7 +7,7 @@ export const Preferences = ({ data, myPreferences, setPreferences }) => {
     setPreferences(myPreferences.concat(preference.target.innerHTML))
 
   };
-  console.log(myPreferences)
+  // console.log(myPreferences)
   return (
     <div className="flex h-screen bg-blue-100 ">
       <div>
@@ -15,7 +15,7 @@ export const Preferences = ({ data, myPreferences, setPreferences }) => {
 
         <div className="grid grid-cols-3 gap-2">
           {preferences.map((preference) => (
-            <div>
+            <div key={preference.index}>
               <p key={preference} onClick={handleClick} className="bg-blue-100 text-blue-800 text-sm font-medium mr-20 ml-5 px-3 py-2 rounded-full dark:bg-blue-300 dark:text-blue-900">{preference}</p>
             </div>
           ))}

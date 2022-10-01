@@ -7,7 +7,7 @@ export const Interests = ({ data, myInterests, setInterests }) => {
     setInterests(myInterests.concat(interest.target.innerHTML))
 
   };
-  console.log(myInterests)
+  // console.log(myInterests)
   return (
     <div className="flex h-screen bg-orange-100 ">
       <div>
