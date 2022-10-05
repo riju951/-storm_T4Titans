@@ -24,7 +24,7 @@ export default function Assesment() {
         }
         fetchRoadmaps()
     }, [])
-
+    // console.log(roadmaps)
     const data = {
         skills: ['Problem-solving', 'Communication skills', 'Interpersonal skills', 'Medicinal', 'scientific research skills', 'Curiosity', 'Persuasive skills', 'marketing', 'organizing', 'Science wizard', 'technical skills', 'identifying problems', 'Computer science', 'Pressure management', 'Teamwork', 'Communication', 'Management', 'Adaptability'],
         interests: ['finding solutions', 'Teamwork', 'Photography', 'Blog Writing', 'Networking', 'Languages', 'Creativity', 'Volunteering', 'Music', 'Investing', 'Art', 'Coding', 'Designing'],
@@ -37,16 +37,18 @@ export default function Assesment() {
 
     const presentInRoadmap = (roadmaps, userDataAll) => {
         roadmaps.forEach(roadmap => {
-            const tags = roadmap.tags
-
+            // const tags = roadmap.tags
+            if (userDataAll.every(item => roadmap.tags.includes(item))) {
+                console.log(roadmap)
+            }
             // tags.find()
             // if (userDataAll.every(item => roadmap.tags.includes(item))) {
 
-            userDataAll.forEach(item => {
-                if (tags.find(item)) {
-                    console.log(roadmap)
-                }
-            })
+            // userDataAll.forEach(item => {
+            //     if (tags.find(item)) {
+            //         console.log(roadmap)
+            //     }
+            // })
         });
     }
 
