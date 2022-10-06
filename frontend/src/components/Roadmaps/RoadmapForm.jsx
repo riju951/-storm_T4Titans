@@ -17,8 +17,29 @@ export const RoadmapForm = () => {
     const [jobProfiles, setJobProfiles] = useState('')
 
 
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const roadmap = {
+            title, desc, stream, tags, eligibility,
+            entranceExams, courses, duration, recruiters, averageSalary,
+            colleges, higherStudies, jobProfiles
+        }
 
+        const response = await fetch('/roadmap/addRoadmap', {
+            method: 'POST',
+            body: JSON.stringify(roadmap),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        const json = await response.json()
+        console.log(json)
+        if (response.ok) {
+            console.log("new roadmap added")
+            alert("Roadmap added successfully")
+        }
 
+    }
 
     return (
         <div className='relative'>
@@ -28,6 +49,7 @@ export const RoadmapForm = () => {
                 alt='bg' />
             <div className=''>
                 <form
+                    onSubmit={handleSubmit}
                     className='absolute left-0 top-0 bottom-0 text-gray-300 font-serif'>
                     <h1 className='text-6xl mt-10 ml-10 font-semibold'>Add a new Roadmap</h1>
 
@@ -65,6 +87,22 @@ export const RoadmapForm = () => {
                                 type="text"
                                 onChange={(e) => setEntranceExams(e.target.value)}
                                 value={entranceExams}
+                            />
+                            <label className=' form-label'>Eligibility</label>
+                            <input
+                                className='form-input'
+                                placeholder='Eligibility '
+                                type="text"
+                                onChange={(e) => setEligibility(e.target.value)}
+                                value={eligibility}
+                            />
+                            <label className=' form-label'>Courses</label>
+                            <input
+                                className='form-input'
+                                placeholder='Courses '
+                                type="text"
+                                onChange={(e) => setCourses(e.target.value)}
+                                value={courses}
                             />
                         </div>
                         <div className='flex flex-col'>
@@ -110,6 +148,22 @@ export const RoadmapForm = () => {
                                 type="text"
                                 onChange={(e) => setJobProfiles(e.target.value)}
                                 value={jobProfiles}
+                            />
+                            <label className=' form-label'>Average Salary</label>
+                            <input
+                                className='form-input'
+                                placeholder='Average Salary'
+                                type="text"
+                                onChange={(e) => setAverageSalary(e.target.value)}
+                                value={averageSalary}
+                            />
+                            <label className=' form-label'>Colleges</label>
+                            <input
+                                className='form-input'
+                                placeholder='Colleges'
+                                type="text"
+                                onChange={(e) => setColleges(e.target.value)}
+                                value={colleges}
                             />
                         </div>
                     </div>

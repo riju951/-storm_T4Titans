@@ -4,7 +4,7 @@ const { createRoadmap, deleteRoadmap, getAllRoadmap, getRoadmap, updateRoadmap }
 
 // {ROADMAP}
 //CREATE
-router.post("/", createRoadmap);
+router.post("/addRoadmap", createRoadmap);
 //UPDATE
 router.put("/:id", updateRoadmap)
 //DELETE

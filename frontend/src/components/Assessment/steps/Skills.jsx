@@ -19,7 +19,7 @@ export const Skills = ({ data, mySkills, setSkills }) => {
             </div>
           ))}
         </div>
-
+        <p className="text-3xl font-bold m-5 text-purple-800">Select at the most 5 skills</p>
         <p className="text-3xl font-semibold m-5 text-purple-800">Your selected skills</p>
         <div className="grid grid-cols-3 gaps-3">
           {mySkills && mySkills.map((mySkill) => (

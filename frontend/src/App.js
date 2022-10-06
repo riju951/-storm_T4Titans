@@ -7,6 +7,7 @@ import { BlogForm } from './components/Blogs/BlogForm'
 import React from 'react';
 import { RoadmapForm } from './components/Roadmaps/RoadmapForm';
 import { Checkout } from './components/Checkout/Checkout';
+import ShowRoadmap from './components/Roadmaps/RoadmapTemplate';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/blogs/addblog" element={<BlogForm />} />
         <Route path="/admin/addRoadmap" element={<RoadmapForm />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/myRoadmap" element={<ShowRoadmap />} />
       </Routes>
     </BrowserRouter>
   );

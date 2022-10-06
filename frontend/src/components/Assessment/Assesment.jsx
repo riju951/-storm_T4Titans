@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
+import ShowRoadmap from '../Roadmaps/RoadmapTemplate';
 import { Interests } from './steps/Interests';
 import { Preferences } from './steps/Preferences';
 import { Skills } from './steps/Skills';
-
 export default function Assesment() {
 
     const [step, setStep] = useState(1);
@@ -11,6 +11,7 @@ export default function Assesment() {
     const [myInterests, setInterests] = useState([])
     const [myPreferences, setPreferences] = useState([])
     const [roadmaps, setRoadmaps] = useState([])
+    const [myRoadmap, setMyRoadmap] = useState({})
     const userData = []
 
     useEffect(() => {
@@ -24,52 +25,70 @@ export default function Assesment() {
         }
         fetchRoadmaps()
     }, [])
-    // console.log(roadmaps)
     const data = {
-        skills: ['Problem-solving', 'Communication skills', 'Interpersonal skills', 'Medicinal', 'scientific research skills', 'Curiosity', 'Persuasive skills', 'marketing', 'organizing', 'Science wizard', 'technical skills', 'identifying problems', 'Computer science', 'Pressure management', 'Teamwork', 'Communication', 'Management', 'Adaptability'],
-        interests: ['finding solutions', 'Teamwork', 'Photography', 'Blog Writing', 'Networking', 'Languages', 'Creativity', 'Volunteering', 'Music', 'Investing', 'Art', 'Coding', 'Designing'],
-        preferences: ['working with people', 'Communication', 'indoors', 'outdoors', 'travel', 'small team size', 'hybrid', 'Mobility', 'working with data']
+        skills:
+            [
+                "Problem-solving", "Technical", "Knowledge of Construction", "Dedication", "Innovativeness", "Software Knowledge", "Communication", "Interpersonal", "Medicinal", "Clarity of Speech", "Knowledge of fashion trends", "Ethics"
+            ],
+
+        interests:
+            [
+                "Programming", "Maths", "Research", "Business", "Confidence", "Fashion", "Drawing", "Singing",
+                "Digital Knowledge", "Public Speaking", "Social Media", "Graphics", "Enthusiasm"
+            ],
+
+        preferences:
+            [
+                "Working with people", "Teamwork", "Outdoors", "Small team size", "Mobility", "Indoors", "Travel", "Hybrid", "Mobility", "Working with Data"
+            ]
     }
 
     userData.push(mySkills)
     userData.push(myInterests)
     userData.push(myPreferences)
 
-    const presentInRoadmap = (roadmaps, userDataAll) => {
-        roadmaps.forEach(roadmap => {
-            // const tags = roadmap.tags
-            if (userDataAll.every(item => roadmap.tags.includes(item))) {
-                console.log(roadmap)
-            }
-            // tags.find()
-            // if (userDataAll.every(item => roadmap.tags.includes(item))) {
-
-            // userDataAll.forEach(item => {
-            //     if (tags.find(item)) {
-            //         console.log(roadmap)
-            //     }
-            // })
-        });
-    }
-
     const userDataAll = []
+    let finalskills = []
+    let finalRoadmap = {}
+    const presentInRoadmap = (roadmaps, userDataAll) => {
 
-    const isMyRoadmap = (userData) => {
+        roadmaps.forEach(roadmap => {
+            const tags = roadmap.tags
+            finalskills = userDataAll.filter(function (item) {
+                if (tags.includes(item)) {
+                    return roadmap
+                }
+            });
+            console.log(finalskills)
+            if (finalskills.length >= 6) {
+                finalRoadmap = roadmap
+                // console.log(roadmap)
+                return finalRoadmap
+            }
+        }
+        )
+        return finalRoadmap
+    }
+    // let ans = presentInRoadmap()
+    // setMyRoadmap(ans)
+
+    const collectingAll = (userData) => {
         for (let i = 0; i < userData.length; i++) {
             for (let j = 0; j < userData[i].length; j++) {
                 userDataAll.push(userData[i][j])
-                console.log(userDataAll)
+                // console.log(userDataAll)
             }
         }
     }
 
-    const isMyRoadmap2 = (userDataAll) => {
+    const isMyRoadmap = (userDataAll) => {
         for (let i = 0; i < userDataAll.length; i++) {
             presentInRoadmap(roadmaps, userDataAll)
+            // console.log(ans)
         }
     }
-    isMyRoadmap(userData)
-    isMyRoadmap2(userDataAll, roadmaps)
+    collectingAll(userData)
+    isMyRoadmap(userDataAll, roadmaps)
 
     const handleNext = () => {
         setStep(step => step + 1);
@@ -77,14 +96,9 @@ export default function Assesment() {
     const handleBack = () => {
         setStep(step => step - 1);
     };
-
-    if (step >= 4) {
-        setStep(3)
-    } else if (step <= 0) {
-        setStep(1)
+    const handleSubmit = () => {
+        setStep(step => step + 1);
     }
-
-
     return (
         <div>
             {step === 1 && <Skills mySkills={mySkills} data={data} setSkills={setSkills} />}
@@ -92,9 +106,30 @@ export default function Assesment() {
             {step === 3 && <Preferences myPreferences={myPreferences} data={data} setPreferences={setPreferences} />}
             <div className='relative flex justify-center bottom-20'>
                 <button className='relative text-2xl p-2 bg-purple-500 rounded-lg px-5 text-white m-3 ' onClick={handleBack}>Back</button>
-                <button className='relative text-2xl p-2 bg-purple-500 rounded-lg px-5 text-white m-3 ' onClick={handleNext}>Next</button>
+                {(step !== 3) && <button className=' relative text-2xl p-2 bg-purple-500 rounded-lg px-5 text-white m-3 ' onClick={handleNext}>Next</button>}
+                {step === 3 && <button className='invisible relative text-2xl p-2 bg-purple-500 rounded-lg px-5 text-white m-3 ' onClick={handleNext}>Next</button>}
+                {step === 3 && <button onClick={handleSubmit} className='relative text-2xl p-2 bg-purple-500 rounded-lg px-5 text-white m-3 '>Submit</button>}
             </div>
+            {step === 4 && <ShowRoadmap finalRoadmap={finalRoadmap} />}
         </div>
     );
 };
 
+ // const presentInRoadmap = (roadmaps, userDataAll) => {
+    //     roadmaps.forEach(roadmap => {
+    //         const tags = roadmap.tags
+    //          finalskills = userDataAll.filter(function (item) {
+    //             if (tags.includes(item)) {
+    //                 return roadmap
+    //             }
+    //         });
+    //         console.log(finalskills)
+    //         if (finalskills.length >= 6) {
+    //             console.log(roadmap)
+
+    //         }
+    //         // setFinalSkills(finalskills)
+    //     }
+    //     )
+    //     return finalskills
+    // }

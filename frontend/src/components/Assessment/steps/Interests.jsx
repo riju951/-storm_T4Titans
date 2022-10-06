@@ -20,6 +20,7 @@ export const Interests = ({ data, myInterests, setInterests }) => {
             </div>
           ))}
         </div>
+        <p className="text-3xl font-bold m-5 text-orange-900 ">Select at the most 3 interests</p>
         <h1 className="text-3xl font-semibold m-5 text-orange-900 ">Add your Interests</h1>
         <div className="grid grid-cols-3 gap-3">
           {myInterests && myInterests.map((myInterest) => (

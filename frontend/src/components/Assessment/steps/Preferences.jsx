@@ -19,11 +19,12 @@ export const Preferences = ({ data, myPreferences, setPreferences }) => {
             </div>
           ))}
         </div>
-
-        <p className="text-3xl font-semibold m-5 text-purple-900 ">Your selected Preferences</p>
+        <p className="text-3xl font-bold m-5 text-blue-900 ">Select at the most 2 preferences</p>
+        <p className="text-3xl font-semibold m-5 text-blue-900 ">Your selected Preferences</p>
         <div className="grid grid-cols-3 gap-3">
           {myPreferences && myPreferences.map((myPreference) => (
-            <div className="" key={myPreference}>
+
+            <div key={myPreference.index} className="" >
               <div className="p-2 ml-5 mt-5">
                 <span id="badge-dismiss-blue" className=" py-2 px-3 mr-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-200 dark:text-blue-800">
                   {myPreference}
