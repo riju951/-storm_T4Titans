@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
-import ShowRoadmap from '../Roadmaps/RoadmapTemplate';
+import ShowRoadmap from '../../../components/Roadmaps/RoadmapTemplate';
 import { Interests } from './steps/Interests';
 import { Preferences } from './steps/Preferences';
 import { Skills } from './steps/Skills';
@@ -39,7 +39,7 @@ export default function Assesment() {
                 "Working with people", "Teamwork", "Outdoors", "Small team size", "Mobility", "Indoors", "Travel", "Hybrid", "Mobility", "Working with Data"
             ]
     }
-//try to use useEffect for getting all the tags in one single array instead of pushing three arrays
+    //try to use useEffect for getting all the tags in one single array instead of pushing three arrays
     userData.push(mySkills)
     userData.push(myInterests)
     userData.push(myPreferences)
@@ -103,7 +103,7 @@ export default function Assesment() {
                 {(step !== 3) && <button className=' relative text-2xl p-2 bg-purple-500 rounded-lg px-5 text-white m-3 ' onClick={handleNext}>Next</button>}
 
                 {step === 3 && <button className='invisible relative text-2xl p-2 bg-purple-500 rounded-lg px-5 text-white m-3 ' onClick={handleNext}>Next</button>}
-                
+
                 {step === 3 && <button onClick={handleSubmit} className='relative text-2xl p-2 bg-purple-500 rounded-lg px-5 text-white m-3 '>Submit</button>}
             </div>
             {step === 4 && <ShowRoadmap finalRoadmap={finalRoadmap} />}

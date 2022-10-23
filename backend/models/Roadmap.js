@@ -1,13 +1,10 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
 const RoadmapSchema = new Schema({
     title: {
         type: String,
         required: true
-    },
-    desc: {
-        type: String
     },
     stream: {
         type: [
@@ -35,14 +32,10 @@ const RoadmapSchema = new Schema({
         required: true
     },
     courses: {
-        type: [
-            {
-                type: String
-            }
-        ],
+        type: String,
     },
     duration: {
-        type: String,
+        type: Number,
     },
     colleges: {
         type: String,
@@ -66,5 +59,4 @@ const RoadmapSchema = new Schema({
     },
 }, { timestamps: true })
 
-// module.exports = mongoose.model('Roadmap', RoadmapSchema)
 export default mongoose.model("Roadmap", RoadmapSchema)
