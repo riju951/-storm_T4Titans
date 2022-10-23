@@ -11,38 +11,35 @@ export default function Assesment() {
     const [myInterests, setInterests] = useState([])
     const [myPreferences, setPreferences] = useState([])
     const [roadmaps, setRoadmaps] = useState([])
-    const [myRoadmap, setMyRoadmap] = useState({})
     const userData = []
 
     useEffect(() => {
         const fetchRoadmaps = async () => {
             const response = await fetch('/roadmap')
             const data = await response.json();
-
             if (response.ok) {
                 setRoadmaps(data)
             }
         }
         fetchRoadmaps()
     }, [])
+
     const data = {
         skills:
             [
                 "Problem-solving", "Technical", "Knowledge of Construction", "Dedication", "Innovativeness", "Software Knowledge", "Communication", "Interpersonal", "Medicinal", "Clarity of Speech", "Knowledge of fashion trends", "Ethics"
             ],
-
         interests:
             [
                 "Programming", "Maths", "Research", "Business", "Confidence", "Fashion", "Drawing", "Singing",
                 "Digital Knowledge", "Public Speaking", "Social Media", "Graphics", "Enthusiasm"
             ],
-
         preferences:
             [
                 "Working with people", "Teamwork", "Outdoors", "Small team size", "Mobility", "Indoors", "Travel", "Hybrid", "Mobility", "Working with Data"
             ]
     }
-
+//try to use useEffect for getting all the tags in one single array instead of pushing three arrays
     userData.push(mySkills)
     userData.push(myInterests)
     userData.push(myPreferences)
@@ -50,6 +47,7 @@ export default function Assesment() {
     const userDataAll = []
     let finalskills = []
     let finalRoadmap = {}
+
     const presentInRoadmap = (roadmaps, userDataAll) => {
 
         roadmaps.forEach(roadmap => {
@@ -62,21 +60,17 @@ export default function Assesment() {
             console.log(finalskills)
             if (finalskills.length >= 6) {
                 finalRoadmap = roadmap
-                // console.log(roadmap)
                 return finalRoadmap
             }
         }
         )
         return finalRoadmap
     }
-    // let ans = presentInRoadmap()
-    // setMyRoadmap(ans)
 
     const collectingAll = (userData) => {
         for (let i = 0; i < userData.length; i++) {
             for (let j = 0; j < userData[i].length; j++) {
                 userDataAll.push(userData[i][j])
-                // console.log(userDataAll)
             }
         }
     }
@@ -84,7 +78,6 @@ export default function Assesment() {
     const isMyRoadmap = (userDataAll) => {
         for (let i = 0; i < userDataAll.length; i++) {
             presentInRoadmap(roadmaps, userDataAll)
-            // console.log(ans)
         }
     }
     collectingAll(userData)
@@ -106,30 +99,14 @@ export default function Assesment() {
             {step === 3 && <Preferences myPreferences={myPreferences} data={data} setPreferences={setPreferences} />}
             <div className='relative flex justify-center bottom-20'>
                 <button className='relative text-2xl p-2 bg-purple-500 rounded-lg px-5 text-white m-3 ' onClick={handleBack}>Back</button>
+
                 {(step !== 3) && <button className=' relative text-2xl p-2 bg-purple-500 rounded-lg px-5 text-white m-3 ' onClick={handleNext}>Next</button>}
+
                 {step === 3 && <button className='invisible relative text-2xl p-2 bg-purple-500 rounded-lg px-5 text-white m-3 ' onClick={handleNext}>Next</button>}
+                
                 {step === 3 && <button onClick={handleSubmit} className='relative text-2xl p-2 bg-purple-500 rounded-lg px-5 text-white m-3 '>Submit</button>}
             </div>
             {step === 4 && <ShowRoadmap finalRoadmap={finalRoadmap} />}
         </div>
     );
 };
-
- // const presentInRoadmap = (roadmaps, userDataAll) => {
-    //     roadmaps.forEach(roadmap => {
-    //         const tags = roadmap.tags
-    //          finalskills = userDataAll.filter(function (item) {
-    //             if (tags.includes(item)) {
-    //                 return roadmap
-    //             }
-    //         });
-    //         console.log(finalskills)
-    //         if (finalskills.length >= 6) {
-    //             console.log(roadmap)
-
-    //         }
-    //         // setFinalSkills(finalskills)
-    //     }
-    //     )
-    //     return finalskills
-    // }

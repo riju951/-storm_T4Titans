@@ -7,7 +7,7 @@ export default function BlogView({ blog }) {
             <p className='text-3xl text-black font-bold'>{blog.title}</p>
             <p className='text-xl'>-By {blog.author}</p>
             <div className='flex space-x-1'>
-                <div className='h-8 w-8'><HeartIcon /></div>
+                <div className='h-5 w-5'><HeartIcon /></div>
                 <p className='font-semibold'>{blog.likes} likes</p>
             </div>
             <p className='font-semibold'>{formatDistanceToNow(new Date(blog.createdAt), { addSuffix: true })}</p>
