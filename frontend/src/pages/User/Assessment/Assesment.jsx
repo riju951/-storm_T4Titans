@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
-import ShowRoadmap from '../Roadmaps/RoadmapTemplate';
+import ShowRoadmap from '../../../components/Roadmaps/RoadmapTemplate';
 import { Interests } from './steps/Interests';
 import { Preferences } from './steps/Preferences';
 import { Skills } from './steps/Skills';
@@ -25,6 +25,21 @@ export default function Assesment() {
         }
         fetchRoadmaps()
     }, [])
+
+    const streams = {
+        science: [
+            "Problem-solving", "Technical", "Innovativeness", "Biology", "Chemistry", 
+        ],
+
+        commerce: [
+            ""
+        ],
+
+        arts: [
+            ""
+        ]
+    }
+
     const data = {
         skills:
             [
