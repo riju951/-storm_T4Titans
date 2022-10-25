@@ -12,10 +12,10 @@ export const Skills = ({ data, mySkills, setSkills }) => {
     <div className="flex h-screen bg-purple-100 ">
       <div>
         <h1 className="text-5xl font-semibold p-8 text-purple-900 ">Add your skills</h1>
-        <div className="grid grid-cols-3  gap-2">
+        <div className="grid grid-cols-3 gap-2">
           {skills.map((skill) => (
             <div key={skill}>
-              <p key={skill} onClick={handleClick} className="cursor-pointer  bg-purple-100 text-purple-800 text-sm font-medium mr-20 ml-5 px-3 py-2 rounded-full dark:bg-purple-300 dark:text-purple-900">{skill}</p>
+              <p key={skill} onClick={handleClick} className="bg-purple-100 text-purple-800 text-sm font-medium mr-20 ml-5 px-3 py-2 rounded-full dark:bg-purple-300 dark:text-purple-900">{skill}</p>
             </div>
           ))}
         </div>

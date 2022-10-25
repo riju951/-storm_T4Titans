@@ -1,6 +1,8 @@
-import express from 'express'
+const express = require('express');
 const router = express.Router();
-import { createBlog, getBlogs, getBlog } from '../controllers/blogController.js';
+const Blog = require('../models/blogModel')
+
+const { createBlog, getBlog, getBlogs } = require('../controllers/blogController')
 
 // {BLOGS}
 //Get all blogs
@@ -11,4 +13,4 @@ router.get('/:id', getBlog)
 router.post('/addblog', createBlog)
 
 
-export default router
+module.exports = router;

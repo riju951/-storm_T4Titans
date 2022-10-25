@@ -16,7 +16,7 @@ export const Interests = ({ data, myInterests, setInterests }) => {
         <div className="grid grid-cols-3 gap-2">
           {interests.map((interest) => (
             <div>
-              <p key={interest} onClick={handleClick} className="cursor-pointer  bg-orange-100 text-orange-800 text-sm font-medium mr-20 ml-5 px-3 py-2 rounded-full dark:bg-orange-300 dark:text-orange-900">{interest}</p>
+              <p key={interest} onClick={handleClick} className="bg-orange-100 text-orange-800 text-sm font-medium mr-20 ml-5 px-3 py-2 rounded-full dark:bg-orange-300 dark:text-orange-900">{interest}</p>
             </div>
           ))}
         </div>

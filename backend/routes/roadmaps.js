@@ -1,10 +1,10 @@
-import express from "express";
-import { createRoadmap, deleteRoadmap, getAllRoadmap, getRoadmap, updateRoadmap } from "../controllers/roadmapController.js";
-
+const express = require('express');
 const router = express.Router();
+const { createRoadmap, deleteRoadmap, getAllRoadmap, getRoadmap, updateRoadmap } = require("../controllers/RoadmapController");
 
+// {ROADMAP}
 //CREATE
-router.post("/", createRoadmap);
+router.post("/addRoadmap", createRoadmap);
 //UPDATE
 router.put("/:id", updateRoadmap)
 //DELETE
@@ -14,4 +14,5 @@ router.get("/:id", getRoadmap)
 //GET ALL
 router.get("/", getAllRoadmap)
 
-export default router
+
+module.exports = router;

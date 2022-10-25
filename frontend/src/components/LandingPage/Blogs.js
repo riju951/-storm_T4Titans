@@ -22,7 +22,10 @@ export default function Blogs() {
           <h1>Januray 23, 2022</h1>
           <div className="">
             <h2 className="mb-3 font-normal text-blue-900">
-              Looking before you leap does not actually mean <br></br>to think and then jump. But it means one must<br></br> think of the consequences and then act. Humans at <br></br>times without thinking take hasty decisions that are ill-advised.{" "}
+              The point of using Lorem Ipsum is that it <br></br>has a
+              more-or-less normal distribution <br></br>of letters, as opposed
+              to using 'Content here,<br></br> content here', making it look
+              like English.{" "}
             </h2>
             <h3>By Monalisa Vinci</h3>
             <button onClick={() => alert("Sign up for a pro account")} className="text-xl rounded-lg text-white font-semibold bg-teal-500 p-3 m-3">
@@ -42,7 +45,10 @@ export default function Blogs() {
           <h1>March 30, 2022</h1>
           <div className="">
             <h2 className="">
-              Once you graduate from college and land <br></br>a job, your next immediate concern is<br></br> how to succeed in your career. Because the world <br></br>has become so competitive, doing well in your<br></br>  job and movingforward with your <br></br>career is more important now than ever.{" "}
+              The point of using Lorem Ipsum is that it <br></br>has a
+              more-or-less normal distribution <br></br>of letters, as opposed
+              to using 'Content here,<br></br> content here', making it look
+              like English.{" "}
             </h2>
             <h3>By Nancy Wheeler</h3>
             <button onClick={() => alert("Sign up for a pro account")} className="text-xl rounded-lg font-semibold text-white bg-teal-500 p-3 m-3">

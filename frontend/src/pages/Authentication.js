@@ -1,11 +1,8 @@
 import React, { useState } from 'react'
 import Login from '../components/auth/Login'
 import SignUp from '../components/auth/SignUp'
-
 export default function Authentication() {
-  
-  const [authState, setAuthState] = useState('')
-
+  const [authState, setAuthState] = useState('login')
   return (
     <div className="bg-gradient-to-b from-blue-900 to-blue-500 min-h-screen grid grid-cols-2">
       <div>
@@ -16,10 +13,12 @@ export default function Authentication() {
         />
       </div>
 
-    <div className='pt-10'>
-      {authState === 'signup' && <SignUp setAuthState={setAuthState} /> }
-      {authState === '' && (<Login setAuthState={setAuthState} />)}
-    </div>
+
+
+      {authState === 'login' && (
+        <Login setAuthState={setAuthState} />
+      )}
+      {authState === 'signup' && <SignUp setAuthState={setAuthState} />}
     </div>
   )
 }

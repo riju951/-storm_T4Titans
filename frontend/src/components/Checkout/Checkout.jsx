@@ -1,6 +1,5 @@
 // import { set } from 'date-fns'
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 
 export const Checkout = () => {
     const [email, setEmail] = useState('')
@@ -16,7 +15,7 @@ export const Checkout = () => {
     return (
         <div className='relative'>
             <img
-                className='h-screen w-full bg-gray-500'
+                className='h-screen w-full'
                 src='https://images.unsplash.com/photo-1628527304948-06157ee3c8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGF5bWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60'
                 alt='bg' />
             <div className=''>
@@ -77,9 +76,9 @@ export const Checkout = () => {
                         onChange={(e) => setCity(e.target.value)}
                         value={city}
                     />
-                    <Link to = "/proweguide"
+                    <a href='/user/weGuidePro'
                         className='hover:bg-gray-800 hover:text-white bg-gray-400 text-black m-2 ml-10 rounded-md py-2 px-3 mt-3'>Upgrade my plan
-                    </Link >
+                    </a>
 
                 </form>
             </div >
