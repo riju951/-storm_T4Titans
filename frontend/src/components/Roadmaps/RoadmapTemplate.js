@@ -4,7 +4,7 @@ const ShowRoadmap = ({ finalRoadmap }) => {
     console.log(finalRoadmap)
 
     return (
-        <div>
+        <div className='h-screen '>
             <section>
                 <div className="bg-black  text-white py-8">
                     <div className="container mx-auto flex flex-col items-start md:flex-row my-12 md:my-24">
@@ -17,7 +17,7 @@ const ShowRoadmap = ({ finalRoadmap }) => {
                             <a href="#"
                                 className="bg-transparent mr-auto hover:bg-yellow-300 text-yellow-300 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-yellow-300 hover:border-transparent">
                                 Explore Now</a>
-                            <a href="/"
+                            <a href="/weguide"
                                 className="bg-transparent mt-5 mr-auto hover:bg-yellow-300 text-yellow-300 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-yellow-300 hover:border-transparent">
                                 Go back</a>
                         </div>

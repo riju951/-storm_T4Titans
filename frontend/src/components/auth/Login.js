@@ -18,10 +18,11 @@ export default function Login({ setAuthState }) {
                             className="block border border-grey-light w-full p-3 rounded mb-4"
                             name="password"
                             placeholder="Password" />
-                        <button
+                        <a
+                            href="weguide"
                             type="submit"
-                            className=" relative top-6 w-full text-center py-3 rounded bg-blue-900 text-white hover:bg-blue-600 focus:outline-none my-6">Create Account
-                        </button>
+                            className=" relative top-6 w-full text-center py-3 rounded bg-blue-900 text-white hover:bg-blue-600 focus:outline-none my-6">Login
+                        </a>
                     </div>
 
 

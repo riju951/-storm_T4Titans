@@ -11,7 +11,6 @@ export default function Assesment() {
     const [myInterests, setInterests] = useState([])
     const [myPreferences, setPreferences] = useState([])
     const [roadmaps, setRoadmaps] = useState([])
-    const [myRoadmap, setMyRoadmap] = useState({})
     const userData = []
 
     useEffect(() => {
