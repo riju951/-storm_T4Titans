@@ -9,7 +9,7 @@ const ExpertCard = ({ exp }) => {
                     </div>
                     <div class="flex items-center">
                         <img class="w-auto h-32 rounded-full transform transition duration-500 hover:scale-110" src={exp.image} alt="Avatar of Jonathan Reinink" />
-                        <div class="text-sm text-left text-white pl-10">
+                        <div class="text-sm text-left text-black pl-10">
                             <p class="leading-none text-xl">{exp.name}</p>
                             <p class="pt-5"><span className='text-lg'>Contact:</span> {exp.contact}</p>
                             <p class=" pt-5"><span className='text-lg'>Address:</span> {exp.address}</p>

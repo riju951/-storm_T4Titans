@@ -41,7 +41,7 @@ const Community = () => {
                         alt=""
                     />
                 </div>
-                <div className="max-w-[1240px] mx-auto text-white relative">
+                <div className="max-w-[1240px] mx-auto text-black relative">
                     <div className="px-4 py-12">
                         <h2 className="text-5xl pt-8 font-semibold text-slate-300 uppercase text-center">
                             Let's Connect
@@ -58,9 +58,9 @@ const Community = () => {
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 relative gap-x-20 gap-y-16 px-14 pt-12 sm:pt-20 text-black">
-                        <div className="bg-white rounded-xl shadow-2xl">
+                        <div className="bg-black rounded-xl shadow-2xl">
                             <div className="p-8">
-                                <SupportIcon className="w-14 p-4 bg-indigo-600 text-white rounded-lg mt-[-4rem]" />
+                                <SupportIcon className="w-14 p-4 bg-indigo-600 text-black rounded-lg mt-[-4rem]" />
                                 <h3 className="font-bold text-2xl my-6">Technical Support</h3>
                                 <p className="text-gray-600 text-xl">
                                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -74,9 +74,9 @@ const Community = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="bg-white rounded-xl shadow-2xl ">
+                        <div className="bg-black rounded-xl shadow-2xl ">
                             <div className="p-8">
-                                <ChipIcon className="w-14 p-4 bg-indigo-600 text-white rounded-lg mt-[-4rem]" />
+                                <ChipIcon className="w-14 p-4 bg-indigo-600 text-black rounded-lg mt-[-4rem]" />
                                 <h3 className="font-bold text-2xl my-6">Media Inquiries</h3>
                                 <p className="text-gray-600 text-xl">
                                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -93,14 +93,14 @@ const Community = () => {
                     </div>
                 </div>
             </div>
-            <div name="pricing" className="w-full text-white my-24">
+            <div name="pricing" className="w-full text-black my-24">
                 <div className="w-full h-[1000px] bg-slate-900 absolute mix-blend-overlay">
                     {/* just for background color */}
                 </div>
 
                 <div className="max-w-[1240px] mx-auto py-12">
                     <div className="text-center py-8 text-slate-300">
-                        <h3 className="text-4xl font-bold text-white py-8">Expert contacts</h3>
+                        <h3 className="text-4xl font-bold text-black py-8">Expert contacts</h3>
                         <p className="text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti laudantium culpa voluptatem
                             rem fugiat tempore, neque quod voluptate illum, minima blanditiis molestiae consectetur eos
                             iusto vero dicta reprehenderit recusandae temporibus.</p>
