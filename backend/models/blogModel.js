@@ -6,10 +6,10 @@ const blogSchema = new Schema({
         type: String,
         required: true
     },
-    // domain: {
-    //     type: String,
-    //     required:true  
-    // },
+    domain: {
+        type: String,
+        required:true  
+    },
     author: {
         type: String,
         required: true

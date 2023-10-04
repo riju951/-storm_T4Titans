@@ -1,11 +1,11 @@
-// import { set } from 'date-fns'
+import { set } from 'date-fns'
 import React, { useState } from 'react'
 
 export const BlogForm = () => {
     const [title, setTitle] = useState('')
     const [author, setAuthor] = useState('')
     const [body, setBody] = useState('')
-    // const [error, setError] = useState(null)
+    const [error, setError] = useState(null)
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -25,7 +25,7 @@ export const BlogForm = () => {
             setAuthor("")
             setBody("")
         }
-        // setError(null)
+        setError(null)
         if (response.ok) {
             console.log("New blog added", json)
         }

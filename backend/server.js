@@ -2,7 +2,7 @@ require('dotenv').config()
 const blogRoutes = require('./routes/blogs')
 const express = require('express')
 const mongoose = require('mongoose')
-const roadmapRoutes = require('./routes/Roadmaps')
+const roadmapRoutes = require('./routes/roadmaps')
 const app = express()
 
 //middleware

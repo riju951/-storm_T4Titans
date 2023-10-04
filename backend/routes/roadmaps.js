@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { createRoadmap, deleteRoadmap, getAllRoadmap, getRoadmap, updateRoadmap } = require("../controllers/RoadmapController");
+const { createRoadmap, deleteRoadmap, getAllRoadmap, getRoadmap, updateRoadmap } = require("../controllers/roadmapController");
 
 // {ROADMAP}
 //CREATE

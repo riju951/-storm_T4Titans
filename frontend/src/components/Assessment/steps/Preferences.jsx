@@ -7,7 +7,7 @@ export const Preferences = ({ data, myPreferences, setPreferences }) => {
     setPreferences(myPreferences.concat(preference.target.innerHTML))
 
   };
-  // console.log(myPreferences)
+  console.log(myPreferences)
   return (
     <div className="flex h-screen bg-blue-100 ">
       <div>

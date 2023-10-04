@@ -1,15 +1,15 @@
-import { Card } from '@material-tailwind/react';
+// import { Card } from '@material-tailwind/react';
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 // import errorResponse from '../../../../backend/utils/errorResponse';
 
-import Assesment from '../components/Assessment/Assesment';
+// import Assesment from '../components/Assessment/Assesment';
 // import MyAssessment from './MyAssessment';
 import Profile from '../components/ProVersion/Profile';
 import ShowRoadmap from '../components/Roadmaps/RoadmapTemplate';
 
 const WeGuide = () => {
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
     const callUserPage = async () => {
         try {
@@ -50,8 +50,8 @@ const WeGuide = () => {
                     </div>
 
                     <div class="mt-8 text-center">
-                        <h5 class="hidden mt-4 text-xl font-semibold text-gray-600 lg:block">Janhavi Patil</h5>
-                        <span class="hidden text-gray-400 lg:block">Student</span>
+                        <h5 class="hidden mt-4 text-xl font-semibold text-gray-600 lg:block">T4Titans</h5>
+                        <span class="hidden text-gray-400 lg:block">Team</span>
                     </div>
 
                     <ul class="space-y-2 tracking-wide mt-8">

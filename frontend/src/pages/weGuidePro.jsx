@@ -1,9 +1,9 @@
 import { Card } from '@material-tailwind/react';
 import React, { useEffect, useState } from 'react';
 // import { NavLink } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 // import logo from '../../assets/logo.png'
-import Community from '../components/ProVersion/Community';
+// import Community from '../components/ProVersion/Community';
 import AddBlog from '../components/ProVersion/AddBlog';// import Assesment from './Assessment/Assesment';
 import BuildCommunity from '../components/ProVersion/BuildCommunity';
 // import MyAssessment from './MyAssessment';
