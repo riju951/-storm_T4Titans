@@ -51,13 +51,27 @@
   
 5. **Start the Backend Server**
     - cd backend
-    - node server.js
+    - node server.js or npm rum dev
   
 6. **Start the Frontend Application**
    - cd ../frontend
    - npm start
 
 <h4>After executing the above steps, the application should be running on localhost. Open your web browser and navigate to http://localhost:3000 (or the port specified) to view the application.</h4>
+
+7. 1. Navigate to the **Releases** section of the repository.
+2. Download the latest model file (e.g., `model.h5` or any other format).
+
+## 🛠️ Installation
+
+Before running the backend model, ensure you have the necessary libraries installed:
+
+```bash
+   - pip install klib scikit-learn joblib seaborn
+
+   - cd backend
+
+   - python run_model.py
 
 
   
