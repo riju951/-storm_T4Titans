@@ -14,7 +14,7 @@ const ShowRoadmap = ({ finalRoadmap }) => {
                             <p className="text-sm md:text-base text-gray-50 mb-4">
                                 {finalRoadmap.desc}
                             </p>
-                            <a href="#"
+                            <a href="/user/weguidepro"
                                 className="bg-transparent mr-auto hover:bg-yellow-300 text-yellow-300 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-yellow-300 hover:border-transparent">
                                 Explore Now</a>
                             <a href="/weguide"

@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 import {
     Card,
-    CardHeader,
     CardBody,
-    CardFooter,
     Typography,
 } from "@material-tailwind/react";
 import PersonalDetails from './PersonalDetails';

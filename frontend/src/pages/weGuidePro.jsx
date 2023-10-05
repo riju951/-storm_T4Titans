@@ -4,10 +4,12 @@ import React, { useEffect, useState } from 'react';
 // import { useNavigate } from 'react-router-dom';
 // import logo from '../../assets/logo.png'
 // import Community from '../components/ProVersion/Community';
-import AddBlog from '../components/ProVersion/AddBlog';// import Assesment from './Assessment/Assesment';
+// import Assesment from './Assessment/Assesment';
+import AddBlog from '../components/ProVersion/AddBlog';
 import BuildCommunity from '../components/ProVersion/BuildCommunity';
 // import MyAssessment from './MyAssessment';
 import Profile from '../components/ProVersion/Profile';
+// import Quiz from '../quiz/quiz';
 
 const ProDashboard = () => {
     // const navigate = useNavigate()

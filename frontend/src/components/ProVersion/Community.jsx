@@ -1,6 +1,6 @@
 import React from 'react';
-import { PhoneIcon, ArrowSmRightIcon } from "@heroicons/react/outline";
-import { ChipIcon, SupportIcon, CheckIcon } from "@heroicons/react/solid";
+import { ArrowSmRightIcon } from "@heroicons/react/outline";
+import { ChipIcon, SupportIcon } from "@heroicons/react/solid";
 import Navbar from '../LandingPage/Navbar';
 import ExpertCard from './ExpertCard';
 const Community = () => {
