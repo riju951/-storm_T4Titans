@@ -30,4 +30,20 @@
 
 ## 🔗 How to Get Started : 
 
+Follow these steps to run the application on your local machine:
+
+1. **Download the Project**
+   - Click on the `Code` button on GitHub and choose `Download ZIP`.
+   - Extract the ZIP file to your preferred location.
+
+2. **Open the Project in a Code Editor**
+   - Navigate to the project directory.
+   - Open the folder using your preferred code editor.
+
+3. **Setup the Frontend**
+   ```bash
+   cd frontend
+   npm i
+
+
 
