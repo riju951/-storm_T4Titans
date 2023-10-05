@@ -30,7 +30,7 @@
 
 ## 🔗 How to Get Started : 
 
-<h2>Follow these steps to run the application on your local machine:</h2>
+<h3>Follow these steps to run the application on your local machine:</h3>
 
 1. **Download the Project**
    - Click on the `Code` button on GitHub and choose `Download ZIP`.
@@ -44,6 +44,23 @@
    - bash
    - cd frontend
    - npm i
+
+4. **Setup the Backend**
+    - cd backend
+    - npm i
+  
+5. **Start the Backend Server**
+    - cd backend
+    - node server.js
+  
+6. **Start the Frontend Application**
+   - cd ../frontend
+   - npm start
+
+<h4>After executing the above steps, the application should be running on localhost. Open your web browser and navigate to http://localhost:3000 (or the port specified) to view the application.</h4>
+
+
+  
 
 
 
