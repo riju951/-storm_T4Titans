@@ -28,14 +28,6 @@ Team Members : Rijans Bhagat, Om Gohil, Param Pandya.
 6. **Community Interaction**  
    Engage with peers through forums, discussion boards, and other social features. Build a network and share experiences.
 
-## 🔗 Useful Links
-- [Live Demo](#) 
-- [User Guide](#)
-- [Contribute](#)
+## 🔗 How to Get Started : 
 
-## 🤝 Contributing
-We welcome contributions! See our [CONTRIBUTING](#) guide for more details.
-
-## 📜 License
-This project is licensed under the MIT License. See [LICENSE](#) for details.
 
